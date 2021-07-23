@@ -18,6 +18,7 @@
     <script defer src="./main.js"></script>
 </head>
 <body>
+
     <!-- navbar -->
     <nav id="navbar">
         <div class="nav__title">
@@ -25,27 +26,27 @@
             <span>daniel</span>
         </div>
         <div class="nav__navbar">
-            <ul class="navbar__item">
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>My work</li>
-                <li>testimonial</li>
-                <li>Contact</li>
+            <ul class="nav__navbar">
+                <li class="navbar__item">Home</li>
+                <li class="navbar__item">About</li>
+                <li class="navbar__item">Skills</li>
+                <li class="navbar__item">My work</li>
+                <li class="navbar__item">testimonial</li>
+                <li class="navbar__item">Contact</li>
             </ul>
         </div>
     </nav>
 
     <!-- title -->
     <section id="title">
-        <img id="title__image" src="./images/people1.jpg" alt="mytitle">
-        <h1 id="title__main">Hello,<br> I'm Dream Coder</h2>
-        <h2 id="title__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut error</h2>
-        <button id="title__button">contact me!</button>
+        <img class="title__image" src="./images/people1.jpg" alt="mytitle">
+        <h1 class="title__main">Hello,<br> I'm Dream Coder</h2>
+        <h2 class="title__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut error</h2>
+        <button class="title__button">contact me!</button>
     </section>
 
     <!-- about -->
-    <section id="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <div class="about__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -107,103 +108,125 @@
     </section>
     
     <!-- skills -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <h3>Skills & Attributes</h3>
-        <p id="skills__description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Ipsum, reiciendis! Dolores 
-            laudantium quo voluptatum, 
-            sit quam beatae quae error!
-            Quaerat est vitae impedit 
-            nulla quam soluta voluptatem eius sed a!
-        </p>
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">skills</h3>
-                <ul id="skillset__list">
-                    <li>
-                        <span class="skill__name">HTML</span>
-                        <span class="skill_per">90%</span>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="skill__name">CSS</span>
-                        <span class="skill_per">80%</span></li>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    <li>
-                        <span class="skill__name">JS</span>
-                        <span class="skill_per">70%</span></li>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    <li>
-                        <span class="skill__name">TS</span>
-                        <span class="skill_per">60%</span></li>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    <li>
-                        <span class="skill__name">REACT</span>
-                        <span class="skill_per">50%</span></li>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    <li>
-                        <span class="skill__name">C++</span>
-                        <span class="skill_per">50%</span>
-                        <div class="progressbar">
-                            <div class="progress"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="skillset__right">
-                <div class="skillset__tools">
-                    <h3 class="skillset__title">Tools</h3>
-                </div>
-                <ul class="tools__list">
-                    <li>Android development tools</li>
-                    <li>Visual Studio</li>
-                    <li>Amazon web service</li>
-                    <li>Mongo db</li>
-                    <li>Stretch app</li>
-                    <li>currently woking</li>
-                    <li>Software Engineer</li>
-                </ul>
-                <div class="skillset__etc">
-                    <h3 class="skillset__title">Etc</h3>
-                    <ul class="etc__list">
-                        <li>Git</li>
-                        <li>Heroku</li>
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h2>Skills</h2>
+            <h3>Skills & Attributes</h3>
+            <p class="skills__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Ipsum, reiciendis! Dolores 
+                laudantium quo voluptatum, 
+                sit quam beatae quae error!
+                Quaerat est vitae impedit 
+                nulla quam soluta voluptatem eius sed a!
+            </p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">skills</h3>
+                    <ul class="skillset__list">
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">HTML</span>
+                                <span class="skill_per">90%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width:90%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">CSS</span>
+                                <span class="skill_per">80%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">JS</span>
+                                <span class="skill_per">70%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">TS</span>
+                                <span class="skill_per">60%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width: 60%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">REACT</span>
+                                <span class="skill_per">50%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__description">
+                                <span class="skill__name">C++</span>
+                                <span class="skill_per">50%</span>
+                            </div>
+                            <div class="progressbar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </li>
                     </ul>
+                </div>
+                <div class="skillset__right">
+                    <div class="skillset__tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li>Android development tools</li>
+                            <li>Visual Studio</li>
+                            <li>Amazon web service</li>
+                            <li>Mongo db</li>
+                            <li>Stretch app</li>
+                            <li>currently woking</li>
+                            <li>Software Engineer</li>
+                        </ul>
+                    </div>
+                    <div class="skillset__etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li>Git</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- work -->
-    <section id="work">
+    <section id="work" class="section section__container">
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="project__section">
             <button class="project__btn">
+                <span class="project__span"></span>
                 All
                 <span class="project__count">8</span>
             </button>
             <button class="project__btn">
+                <span class="project__span"></span>
                 Front-end
                 <span class="project__count">5</span>
             </button>
             <button class="project__btn">
+                <span class="project__span"></span>
                 Back-end
                 <span class="project__count">2</span>
             </button>
             <button class="project__btn">
+                <span class="project__span"></span>
                 Mobile
                 <span class="project__count">1</span>
             </button>
@@ -211,54 +234,71 @@
         <div class="project__layout">
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project1.png" alt="project1">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project2.png" alt="project2">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project3.png" alt="project3">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project4.png" alt="project4">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project5.png" alt="project5">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project6.png" alt="project6">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project7.png" alt="project7">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
             <a href="#" target="_blank" class="project__img">
                 <img src="images/projects/project8.png" alt="project8">
-                <h3>project</h3>
-                <span>Explane</span>
+                <div class="project__description">
+                    <h3>project</h3>
+                    <span>Explane</span>
+                </div>
             </a>
         </div>
     </section>
 
     <!-- testimonials -->
-    <section id="testimonials">
-        <h1>testimonials</h1>
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>testimonials</h1>
         <h3>See What they say about me</h3>
         <div class="testimonial">
             <div class="testimonial__people">
-                <img src="./images/people1.jpg" alt="people1">
+                <img class="testimonial__img" src="./images/people1.jpg" alt="people1">
                 <div class="people__comment-bubble">
                     <p class="people__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sapiente ducimus enim nihil beatae harum perferendis accusamus voluptatem, nam vel, omnis minus praesentium dignissimos sed labore? Maiores expedita facilis autem.</p>
                     <p class="people__name"><a href="#">Ellie</a> / samsung</p>
@@ -269,13 +309,14 @@
                     <p class="people__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab doloribus voluptatem nemo! Quae quo aspernatur, ad pariatur harum, a, deleniti numquam fuga rem odit maxime autem? Voluptatibus ea fugit neque?</p>
                     <p class="people__name"><a href="#">Ellie</a> / samsung</p>
                 </div>
-                <img src="./images/people1.jpg" alt="people2">
+                <img class="testimonial__img" src="./images/people1.jpg" alt="people2">
             </div>
+        </div>
         </div>
     </section>
 
     <!-- contact -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1>Let's talk</h1>
         <h3>dreamCoding@Photofolio.Clone</h2>
         <div class="contact__icon">
