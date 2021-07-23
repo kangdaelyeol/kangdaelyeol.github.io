@@ -491,3 +491,53 @@ button{
   transform: scale(1.2);
   color:var(--color-yellow);
 }
+
+
+/* MEDIA QUERY */
+
+.nav__btn{
+  position: absolute;
+  right: 20px;
+  color:var(--color-white);
+  font-size: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav__navbar{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .nav__btn{
+    display: block;
+  }
+  .about__majors{
+    flex-direction: column;
+  }
+  .major{
+    margin-bottom: 20px;
+  }
+  .skillset{
+    flex-direction: column;
+  }
+  .project__section{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+  .project__img{
+    flex-grow: 1;
+  }
+  .testimonial__img{
+    width: 100px; height: 100px;
+  }
+}
