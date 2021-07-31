@@ -1,0 +1,21 @@
+.box{
+  background-color: thistle;
+  width: 200px;
+  height: 200px;
+  margin:50px;
+  transition: all .5s linear;
+}
+
+
+.active{
+  background-color: tomato;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 200px;
+}
+
+body{
+  margin-top: 500px;
+}

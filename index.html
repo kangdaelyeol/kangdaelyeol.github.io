@@ -20,19 +20,19 @@
 <body>
 
     <!-- navbar -->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav__title">
             <i class="fab fa-css3"></i>
             <span>daniel</span>
         </div>
-        <div class="nav__navbar">
-            <ul class="nav__navbar">
-                <li class="navbar__item">Home</li>
-                <li class="navbar__item">About</li>
-                <li class="navbar__item">Skills</li>
-                <li class="navbar__item">My work</li>
-                <li class="navbar__item">testimonial</li>
-                <li class="navbar__item">Contact</li>
+        <div class="nav__navbar nav__div">
+            <ul class="nav__navbar nav__ul">
+                <li class="navbar__item item__active title" data-link="#title">Home</li>
+                <li class="navbar__item about" data-link="#about">About</li>
+                <li class="navbar__item skills" data-link="#skills">Skills</li>
+                <li class="navbar__item work" data-link="#work">My work</li>
+                <li class="navbar__item testimonials" data-link="#testimonials">testimonial</li>
+                <li class="navbar__item contact" data-link="#contact">Contact</li>
             </ul>
         </div>
         <button class="nav__btn">
@@ -41,7 +41,7 @@
     </nav>
 
     <!-- title -->
-    <section id="title">
+    <section id="title" class="scrollbar">
         <img class="title__image" src="./images/people1.jpg" alt="mytitle">
         <h1 class="title__main">Hello,<br> I'm Dream Coder</h2>
         <h2 class="title__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut error</h2>
@@ -49,7 +49,7 @@
     </section>
 
     <!-- about -->
-    <section id="about" class="section section__container">
+    <section id="about" class="section section__container scrollbar">
         <h1>About me</h1>
         <div class="about__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -111,7 +111,7 @@
     </section>
     
     <!-- skills -->
-    <section id="skills" class="section">
+    <section id="skills" class="section scrollbar">
         <div class="section__container">
             <h2>Skills</h2>
             <h3>Skills & Attributes</h3>
@@ -209,82 +209,82 @@
     </section>
 
     <!-- work -->
-    <section id="work" class="section section__container">
+    <section id="work" class="section section__container scrollbar">
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="project__section">
-            <button class="project__btn">
+            <button class="project__btn project__active" data-project="all">
                 <span class="project__span"></span>
                 All
                 <span class="project__count">8</span>
             </button>
-            <button class="project__btn">
+            <button class="project__btn" data-project="front">
                 <span class="project__span"></span>
                 Front-end
                 <span class="project__count">5</span>
             </button>
-            <button class="project__btn">
+            <button class="project__btn" data-project="back">
                 <span class="project__span"></span>
                 Back-end
                 <span class="project__count">2</span>
             </button>
-            <button class="project__btn">
+            <button class="project__btn" data-project="mobile">
                 <span class="project__span"></span>
                 Mobile
                 <span class="project__count">1</span>
             </button>
         </div>
         <div class="project__layout">
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="front">
                 <img src="images/projects/project1.png" alt="project1">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="front">
                 <img src="images/projects/project2.png" alt="project2">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="front">
                 <img src="images/projects/project3.png" alt="project3">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="front">
                 <img src="images/projects/project4.png" alt="project4">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="back">
                 <img src="images/projects/project5.png" alt="project5">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="back">
                 <img src="images/projects/project6.png" alt="project6">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="mobile">
                 <img src="images/projects/project7.png" alt="project7">
                 <div class="project__description">
                     <h3>project</h3>
                     <span>Explane</span>
                 </div>
             </a>
-            <a href="#" target="_blank" class="project__img">
+            <a href="#" target="_blank" class="project__img" data-filter="front">
                 <img src="images/projects/project8.png" alt="project8">
                 <div class="project__description">
                     <h3>project</h3>
@@ -295,7 +295,7 @@
     </section>
 
     <!-- testimonials -->
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section scrollbar">
         <div class="section__container">
             <h1>testimonials</h1>
         <h3>See What they say about me</h3>
@@ -319,7 +319,7 @@
     </section>
 
     <!-- contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section scrollbar">
         <h1>Let's talk</h1>
         <h3>dreamCoding@Photofolio.Clone</h2>
         <div class="contact__icon">
@@ -332,5 +332,10 @@
         </div>
         <p class="contact__allright"> 2020 Lorem ipsum dolor sit</p>
     </section>
+
+    <!-- arrow -->
+    <button class="arrow arrow__none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
