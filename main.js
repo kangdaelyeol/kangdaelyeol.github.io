@@ -152,7 +152,7 @@ const navIds = [
   '#about',
   '#skills',
   '#work',
-  '#testimonials',
+  '#certificates',
   '#contact',
 ];
 const navItems = navIds.map((id) => document.querySelector(id));
