@@ -8,6 +8,7 @@ const title = document.querySelector('#title');
 const title__introduce = document.querySelector(".title__introduce");
 const title__btn = document.querySelector(".title__image .btn");
 const title__backbtn = document.querySelector(".title__back");
+const title__video = document.querySelector(".title__video");
 
 const nav__item = document.querySelector('.nav__navbar');
 
@@ -193,6 +194,17 @@ const handlewheel = () => {
   navbarhandler(changeNavId);
 };
 
+const setSize = () => {
+  const innerHeight = window.innerHeight;
+  console.log(innerHeight);
+}
+
+const resizingElements = (e) => {
+  // resizing height of video
+  const innerHeight = window.innerHeight;
+  console.log(innerHeight);
+}
+
 // Title img btn event
 title__btn.addEventListener("click", () => {
   title__introduce.classList.add("mystory");
@@ -205,3 +217,6 @@ const observer = new IntersectionObserver(handleObserve, options);
 for (let id in navItems) {
   observer.observe(navItems[id]);
 }
+
+window.addEventListener("load", setSize)
+window.addEventListener("resize", resizingElements);
