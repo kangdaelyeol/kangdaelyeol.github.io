@@ -111,7 +111,7 @@ button {
 	height: 93px;
 	color: var(--color-white);
 	transition: all 0.2s ease-in-out;
-	z-index: 1;
+	z-index: 10;
 }
 
 .nav__title {
@@ -149,19 +149,84 @@ button {
 /* TITLE */
 
 #title {
-	text-align: center;
-	/* background: center / cover no-repeat url('./images/bgimage.jpg'); */
+  position: relative;
+}
+
+#title .title__video {
+  position: absolute;
+  z-index: 1;
+}
+.title__video video{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+
+#title .title__introduce{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top:0;
+  left: 0;
+  text-align: center;
+  /* background: center / cover no-repeat url('./images/bgimage.jpg'); */
+  padding: 50px;
+  padding-top: 100px;
+  clip-path: circle(1000px);
+  transition: all 0.5s ease-in;
   background-color: #73aace;
-	padding: 50px;
-	padding-top: 100px;
+  z-index: 2;
 }
 
 .title__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	height: 250px;
 	width: 250px;
 	border-radius: 50%;
-	border: 2px solid var(--color-white);
 	object-fit: fill;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+
+.title__image.imgsrc{
+  position: relative;
+  width: 240px;
+  height: 240px;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.title__image .btn{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all .25s ease;
+  opacity: 0;
+}
+.title__image .btn:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* When you click button, mystory class will be added to introduce section*/
+#title .title__introduce.mystory {
+  clip-path: circle(0px) ;
 }
 
 .title__main,
@@ -182,6 +247,32 @@ button {
 	background-color: var(--color-pink);
 	opacity: 0.95;
 }
+/* title__backBtn */
+
+.title__back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% ;
+  background-color: #000000;
+  opacity: 0.3;
+  transition: all .2s ease;
+}
+
+.title__back:hover {
+  opacity: 1;
+}
+
+.title__back i{
+  color: var(--color-white);
+}
+
+
 /* ABOUT */
 
 .about__description {
@@ -400,6 +491,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	margin: 1px;
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .project__img img {
@@ -422,6 +515,10 @@ button {
 	color: var(--color-light-white);
 	transform: translateY(5px);
 	transition: all 0.25s ease;
+}
+.project__description span {
+	padding: 10px;
+	font-size: var(--font-small);
 }
 .project__description h3 {
 	color: var(--color-white);
@@ -446,6 +543,8 @@ button {
 	transform: translateY(0);
 }
 
+/* Certificates */
+
 #certificates {
 	background-color: var(--color-light-white);
 }
@@ -455,18 +554,17 @@ button {
 }
 .certificates__list {
 	display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 	margin-bottom: 30px;
 }
 
 .certificates__list span {
-  margin-bottom: 10px;
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
+	margin-bottom: 10px;
+	font-size: var(--font-small);
+	font-weight: var(--weight-semi-bold);
 }
-
 
 /* CONTACT */
 
@@ -595,7 +693,7 @@ button {
 	.skillset {
 		flex-direction: column;
 	}
-	.project__section {
+	/* .project__section {
 		display: grid;
 		width: 100%;
 		grid-template-columns: repeat(2, 1fr);
@@ -605,7 +703,7 @@ button {
 	}
 	.project__img {
 		flex-grow: 1;
-	}
+	} */
 	.certificates__list {
 		flex-direction: column;
 		align-items: center;

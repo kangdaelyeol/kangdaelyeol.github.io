@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./titlegradient.css">
     <script defer src="https://kit.fontawesome.com/9ca53f90c4.js" crossorigin="anonymous"></script>
     <script defer src="https://kit.fontawesome.com/f4dc94395a.js" crossorigin="anonymous"></script>
     <script defer src="./main.js"></script>
@@ -43,10 +44,25 @@
 
     <!-- title -->
     <section id="title" class="scrollbar">
-        <img class="title__image" src="https://pub-b7f3edbf1c224a028525eec6746ddd09.r2.dev/p_profile.jpeg" alt="mytitle">
-        <h1 class="title__main">Hello,<br> I'm Daniel</h2>
-        <h2 class="title__description">I'm a student at Jeju National University</h2>
-        <button class="title__button">contact me!</button>
+        <div class="title__video">
+            <video autoplay muted loop>
+                <source src="https://pub-b7f3edbf1c224a028525eec6746ddd09.r2.dev/sample3.mp4"/>
+            </video>
+            <button class="title__back">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <div class="title__introduce">
+            <div class="title__image">
+                <div class="title__image__background">
+                </div>
+                <img class="title__image imgsrc" src="https://pub-b7f3edbf1c224a028525eec6746ddd09.r2.dev/p_profile.jpeg" alt="mytitle">
+                <div class="btn">Watch my story</div>
+            </div>
+            <h1 class="title__main">Hello,<br> I'm Daniel</h2>
+            <h2 class="title__description">I'm a student at Jeju National University</h2>
+            <button class="title__button">contact me!</button>
+        </div>
     </section>
 
     <!-- about -->

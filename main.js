@@ -5,6 +5,9 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 const title = document.querySelector('#title');
+const title__introduce = document.querySelector(".title__introduce");
+const title__btn = document.querySelector(".title__image .btn");
+const title__backbtn = document.querySelector(".title__back");
 
 const nav__item = document.querySelector('.nav__navbar');
 
@@ -190,6 +193,13 @@ const handlewheel = () => {
   navbarhandler(changeNavId);
 };
 
+// Title img btn event
+title__btn.addEventListener("click", () => {
+  title__introduce.classList.add("mystory");
+})
+title__backbtn.addEventListener("click", () => {
+  title__introduce.classList.remove("mystory");
+})
 window.addEventListener('wheel', handlewheel);
 const observer = new IntersectionObserver(handleObserve, options);
 for (let id in navItems) {
