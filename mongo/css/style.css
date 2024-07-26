@@ -267,9 +267,10 @@ body {
 
 .post .post-icon {
 	position: absolute;
+	cursor: pointer;
+	font-size: 20px;
 	top: 10px;
 	right: 10px;
-	z-index: 10;
 }
 
 .post img {
@@ -302,6 +303,15 @@ body {
 
 .post-background .item {
 	z-index: 11;
+	display: flex;
+	font-size: 20px;
+	padding: 20px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.post-background .item span {
+	margin-left: 5px;
 }
 
 .post .post-background:hover .box {
@@ -311,11 +321,4 @@ body {
 
 .post .post-background:hover .item {
 	opacity: 1;
-}
-
-.post-background .item {
-	cursor: pointer;
-	display: flex;
-	opacity: 0;
-	padding: 7px;
 }
