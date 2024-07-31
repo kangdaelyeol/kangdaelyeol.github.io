@@ -1,0 +1,22 @@
+.box {
+	width: 50%;
+	font-size: 30px;
+	color: var(--font-color);
+	font-weight: bolder;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content {
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+	border: 10px solid black;
+}
+
+.container {
+	height: 700px;
+	border: 3px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
