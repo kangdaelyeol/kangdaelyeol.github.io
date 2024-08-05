@@ -1,0 +1,23 @@
+/* COMMON */
+* {
+	box-sizing: border-box;
+}
+body {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+	font-family: Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.inner {
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
