@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            defer
+            src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+        ></script>
+        <script defer src="./js/script.js"></script>
+        <script type="module" defer src="./js/profile.js"></script>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/profile.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header_contents">
+                <div class="left">
+                    <div class="icon">
+                        <box-icon
+                            name="image-alt"
+                            type="solid"
+                            animation="spin"
+                            size="60px"
+                        ></box-icon>
+                    </div>
+                    <div class="title">Gallery</div>
+                </div>
+                <div class="right">
+                    <a href="./index.html">
+                        <div class="icon">
+                            <box-icon
+                                name="home-smile"
+                                type="solid"
+                                animation="tada"
+                                size="60px"
+                            ></box-icon>
+                        </div>
+                    </a>
+                    <div class="icon">
+                        <box-icon
+                            name="search-alt-2"
+                            animation="burst"
+                            size="60px"
+                        ></box-icon>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main_contents">
+                <div class="profile">
+                    <div class="profile_image">
+                        <img src="./image/sample.jpg" alt="img" />
+                    </div>
+                    <div class="profile_description">
+                        <div class="name">강대렬</div>
+                        <div class="introduce">
+                            안녕하세요! <br />
+                            저는 26살 강대렬 입니다!<br />
+                            잘 부탁드려용!!
+                        </div>
+                    </div>
+                </div>
+                <div class="picture_list"></div>
+            </div>
+        </main>
+        <div class="modal hidden">
+            <div class="modal_contents">
+                <div class="modal_picture">
+                    <img src="./image/sample.jpg" alt="modal_img" />
+                </div>
+                <div class="modal_description">
+                    <div class="modal_title">title</div>
+                    <div class="modal_subtitle">subtitle</div>
+                </div>
+            </div>
+            <div class="btn"></div>
+        </div>
+    </body>
+</html>
