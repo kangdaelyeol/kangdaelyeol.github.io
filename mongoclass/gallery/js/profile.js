@@ -22,7 +22,6 @@ const createPictureEl = (imgPath, title, subTitle, index) => {
 
     const subTitleEl = document.createElement('div')
     subTitleEl.classList.add('subtitle')
-    subTitleEl.innerHTML = subTitle
 
     descriptionEl.appendChild(emptyDiv)
     descriptionEl.appendChild(titleEl)
