@@ -65,7 +65,7 @@ export const SCENE4_MESSAGE_ACTIVE = [
     { from: 0.685, to: 0.745 },
     { from: 0.705, to: 0.745 },
     { from: 0.725, to: 0.745 },
-    { from: 0.77, to: 1 },
+    { from: 0.755, to: 1 },
 ]
 
 export const SCENE1_OPACITY_ACTIVE = {

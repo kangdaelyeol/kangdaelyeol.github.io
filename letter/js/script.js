@@ -28,15 +28,20 @@ const SCENE_HEIGHT_RATIO = 100
 // Global variables
 
 let sceneHeight
-let isUnlocked = true
+let isUnlocked = false
+let isStarWar = false
+let starWarY = 0
 
 // Elements
+
+const starWarEl = document.querySelector('.star_warz')
+const sceneContainerEl = document.querySelector('.scene_container')
+const lastMessageEl = document.querySelector('.last_message')
 
 const letterContainer = document.querySelector('.letter_container')
 const scene = document.querySelector('.scene')
 const letterFormEl = document.querySelector('.input_form')
 const passwordInputEl = document.querySelector('.password_input')
-
 // Scene1 Elements
 
 const scene1ImageElList = document.querySelectorAll(
@@ -128,6 +133,31 @@ const onWindowLoad = () => {
     activeScene4MessageSlider(0, scene4messageElList)
 }
 
+const starWarCheck = () => {
+    if (getScrollRatio() > 0.75) isStarWar = true
+    else isStarWar = false
+
+    if (starWarY > 150) {
+        sceneContainerEl.classList.add('active')
+        starWarEl.classList.add('active')
+        lastMessageEl.classList.add('active')
+    } else {
+        sceneContainerEl.classList.remove('active')
+        starWarEl.classList.remove('active')
+        lastMessageEl.classList.remove('active')
+    }
+
+    if (isStarWar) {
+        console.log('starwar')
+        starWarEl.style.transform = `translateY(${-starWarY}px)`
+        starWarY++
+    } else {
+        starWarY = 0
+        starWarEl.style.transform = `translateY(${-starWarY}px)`
+    }
+    requestAnimationFrame(starWarCheck)
+}
+
 const init = () => {
     letterFormEl.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -135,12 +165,16 @@ const init = () => {
         passwordInputEl.value = ''
         if (password === 'A308') {
             isUnlocked = true
+            document.querySelector('.lock_container').remove()
+            scrollTo({
+                top: 0,
+            })
         }
     })
-    document.querySelector('.lock_container').remove()
 
     window.addEventListener('load', onWindowLoad)
     window.addEventListener('scroll', onWindowScroll)
+    starWarCheck()
 }
 
 init()
