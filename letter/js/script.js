@@ -28,7 +28,7 @@ const SCENE_HEIGHT_RATIO = 100
 // Global variables
 
 let sceneHeight
-let isUnlocked = false
+let isUnlocked = true
 
 // Elements
 
@@ -134,10 +134,10 @@ const init = () => {
         const password = passwordInputEl.value
         passwordInputEl.value = ''
         if (password === 'A308') {
-            // isUnlocked = true
-            // document.querySelector('.lock_container').remove()
+            isUnlocked = true
         }
     })
+    document.querySelector('.lock_container').remove()
 
     window.addEventListener('load', onWindowLoad)
     window.addEventListener('scroll', onWindowScroll)

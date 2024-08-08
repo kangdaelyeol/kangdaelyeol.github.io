@@ -7,17 +7,17 @@ export const SCENE2_IMAGE_ACTIVE = [
 ]
 
 export const SCENE3_IMAGE_ACTIVE = [
-    0.43, 0.45, 0.47, 0.49, 0.51, 0.53, 0.55, 0.57,
+    0.43, 0.45, 0.47, 0.49, 0.51, 0.53, 0.55, 0.57, 0.59,
 ]
 
 export const SCENE4_IMAGE_ACTIVE = [
     {
-        from: 0.585,
-        to: 0.655,
+        from: 0.605,
+        to: 0.675,
     },
     {
-        from: 0.66,
-        to: 0.73,
+        from: 0.68,
+        to: 0.75,
     },
 ]
 
@@ -55,21 +55,22 @@ export const SCENE3_MESSAGE_ACTIVE = [
     { from: 0.515, to: 0.525 },
     { from: 0.535, to: 0.545 },
     { from: 0.555, to: 0.565 },
+    { from: 0.575, to: 0.585 },
 ]
 
 export const SCENE4_MESSAGE_ACTIVE = [
-    { from: 0.59, to: 0.65 },
-    { from: 0.61, to: 0.65 },
-    { from: 0.63, to: 0.65 },
-    { from: 0.665, to: 0.725 },
-    { from: 0.685, to: 0.725 },
-    { from: 0.705, to: 0.725 },
-    { from: 0.75, to: 1 },
+    { from: 0.61, to: 0.67 },
+    { from: 0.63, to: 0.67 },
+    { from: 0.65, to: 0.67 },
+    { from: 0.685, to: 0.745 },
+    { from: 0.705, to: 0.745 },
+    { from: 0.725, to: 0.745 },
+    { from: 0.77, to: 1 },
 ]
 
 export const SCENE1_OPACITY_ACTIVE = {
     from: 0,
-    to: 0.05,
+    to: 0.03,
 }
 
 export const SCENE2_SLIDER_ACTIVE = {
@@ -79,10 +80,10 @@ export const SCENE2_SLIDER_ACTIVE = {
 
 export const SCENE3_SLIDER_ACTIVE = {
     from: 0.405,
-    to: 0.575,
+    to: 0.6,
 }
 
 export const SCENE4_SLIDER_ACTIVE = {
-    from: 0.58,
+    from: 0.6,
     to: 1,
 }
