@@ -42,6 +42,9 @@ const letterContainer = document.querySelector('.letter_container')
 const scene = document.querySelector('.scene')
 const letterFormEl = document.querySelector('.input_form')
 const passwordInputEl = document.querySelector('.password_input')
+
+const loadingSpinnerEl = document.querySelector('.loading_container')
+
 // Scene1 Elements
 
 const scene1ImageElList = document.querySelectorAll(
@@ -109,6 +112,7 @@ const onWindowScroll = () => {
 }
 
 const onWindowLoad = () => {
+    // loadingSpinnerEl.remove()
     const innerH = window.innerHeight
     letterContainer.style.height = innerH * SCENE_HEIGHT_RATIO + 'px'
     sceneHeight = innerH * SCENE_HEIGHT_RATIO

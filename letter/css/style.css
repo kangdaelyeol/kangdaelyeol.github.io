@@ -366,3 +366,34 @@ img {
 .last_message.active {
     opacity: 0;
 }
+
+.loading_container {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+}
+
+.loading_spinner {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(0, 25, 44);
+    border-bottom: none;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
