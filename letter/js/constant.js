@@ -87,3 +87,47 @@ export const SCENE4_SLIDER_ACTIVE = {
     from: 0.6,
     to: 1,
 }
+
+// Letter Image Path
+
+export const SCENE1_IMAGE_PATH_LIST = [
+    './image/1/1-1.jpeg',
+    './image/1/1-2.jpeg',
+    './image/1/1-3.jpeg',
+    './image/1/1-4.jpeg',
+    './image/1/1-5.jpeg',
+    './image/1/1-6.jpeg',
+    './image/1/1-7.jpg',
+    './image/1/1-8.jpg',
+    './image/1/1-9.jpg',
+    './image/1/1-10.jpg',
+]
+
+export const SCENE2_IMAGE_PATH_LIST = [
+    './image/2/2-1.jpeg',
+    './image/2/2-2.JPG',
+    './image/2/2-3t.JPG',
+    './image/2/2-4.jpeg',
+    './image/2/2-5.jpeg',
+    './image/2/2-6.jpeg',
+    './image/2/2-7.jpeg',
+    './image/2/2-8.jpeg',
+    './image/2/2-9.png',
+]
+
+export const SCENE3_IMAGE_PATH_LIST = [
+    './image/3/3-1.jpeg',
+    './image/3/3-2.jpeg',
+    './image/3/3-3.jpeg',
+    './image/3/3-4.jpeg',
+    './image/3/3-5.jpeg',
+    './image/3/3-6.jpeg',
+    './image/3/3-7.jpeg',
+    './image/3/3-8.jpeg',
+    './image/3/3-9.jpeg',
+]
+
+export const SCENE4_IMAGE_PATH_LIST = [
+    './image/4/4-1.jpeg',
+    './image/4/4-2.jpeg',
+]

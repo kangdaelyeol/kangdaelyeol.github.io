@@ -21,9 +21,22 @@ import {
     activeScene4MessageSlider,
 } from './helpers/scene4Helpers.js'
 
+import {
+    SCENE1_IMAGE_PATH_LIST,
+    SCENE2_IMAGE_PATH_LIST,
+    SCENE3_IMAGE_PATH_LIST,
+    SCENE4_IMAGE_PATH_LIST,
+} from './constant.js'
+
 // Constant variables
 
 const SCENE_HEIGHT_RATIO = 100
+
+const TOTAL_IMAGE_COUNT =
+    SCENE1_IMAGE_PATH_LIST.length +
+    SCENE2_IMAGE_PATH_LIST.length +
+    SCENE3_IMAGE_PATH_LIST.length +
+    SCENE4_IMAGE_PATH_LIST.length
 
 // Global variables
 
@@ -31,6 +44,7 @@ let sceneHeight
 let isUnlocked = false
 let isStarWar = false
 let starWarY = 0
+let currentImageLoadedCount = 0
 
 // Elements
 
@@ -43,9 +57,14 @@ const scene = document.querySelector('.scene')
 const letterFormEl = document.querySelector('.input_form')
 const passwordInputEl = document.querySelector('.password_input')
 
-const loadingSpinnerEl = document.querySelector('.loading_container')
+const loadingContainerEl = document.querySelector('.loading_container')
+const loadingProgressEl = document.querySelector('.loading_progress')
 
 // Scene1 Elements
+
+const scene1ImageContainerElList = document.querySelectorAll(
+    '.image_slider .image_container'
+)
 
 const scene1ImageElList = document.querySelectorAll(
     '.image_slider .image_container'
@@ -55,6 +74,10 @@ const scene1MessageElList = document.querySelectorAll('.slider1 .message')
 
 // Scene2 Elements
 
+const scene2ImageContainerElList = document.querySelectorAll(
+    '.image_slider2 .image_container'
+)
+
 const scene2ImageSlider = document.querySelector('.image_slider2')
 
 const scene2ImageElList = scene2ImageSlider.querySelectorAll('.image_container')
@@ -63,6 +86,10 @@ const scene2messageElList = document.querySelectorAll('.slider2 .message')
 
 // Scene3 Elements
 
+const scene3ImageContainerElList = document.querySelectorAll(
+    '.image_slider3 .image_container'
+)
+
 const scene3ImageSlider = document.querySelector('.image_slider3')
 
 const scene3ImageElList = scene3ImageSlider.querySelectorAll('.image_container')
@@ -70,6 +97,10 @@ const scene3ImageElList = scene3ImageSlider.querySelectorAll('.image_container')
 const scene3messageElList = document.querySelectorAll('.slider3 .message')
 
 // Scene4 Elements
+
+const scene4ImageContainerElList = document.querySelectorAll(
+    '.image_slider4 .image_container'
+)
 
 const scene4ImageSlider = document.querySelector('.image_slider4')
 
@@ -112,7 +143,7 @@ const onWindowScroll = () => {
 }
 
 const onWindowLoad = () => {
-    // loadingSpinnerEl.remove()
+    loadingContainerEl.remove()
     const innerH = window.innerHeight
     letterContainer.style.height = innerH * SCENE_HEIGHT_RATIO + 'px'
     sceneHeight = innerH * SCENE_HEIGHT_RATIO
@@ -162,6 +193,47 @@ const starWarCheck = () => {
     requestAnimationFrame(starWarCheck)
 }
 
+const loadImage = () => {
+    const onImageLoad = () => {
+        currentImageLoadedCount++
+        const loadingProgressRatio =
+            (currentImageLoadedCount / TOTAL_IMAGE_COUNT) * 100
+        loadingProgressEl.innerHTML = loadingProgressRatio.toFixed(2) + '%'
+    }
+
+    scene1ImageContainerElList.forEach((el, index) => {
+        const imageEl = new Image()
+        imageEl.src = SCENE1_IMAGE_PATH_LIST[index]
+        el.appendChild(imageEl)
+
+        imageEl.addEventListener('load', onImageLoad)
+    })
+
+    scene2ImageContainerElList.forEach((el, index) => {
+        const imageEl = new Image()
+        imageEl.src = SCENE2_IMAGE_PATH_LIST[index]
+        el.appendChild(imageEl)
+
+        imageEl.addEventListener('load', onImageLoad)
+    })
+
+    scene3ImageContainerElList.forEach((el, index) => {
+        const imageEl = new Image()
+        imageEl.src = SCENE3_IMAGE_PATH_LIST[index]
+        el.appendChild(imageEl)
+
+        imageEl.addEventListener('load', onImageLoad)
+    })
+
+    scene4ImageContainerElList.forEach((el, index) => {
+        const imageEl = new Image()
+        imageEl.src = SCENE4_IMAGE_PATH_LIST[index]
+        el.appendChild(imageEl)
+
+        imageEl.addEventListener('load', onImageLoad)
+    })
+}
+
 const init = () => {
     letterFormEl.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -181,4 +253,5 @@ const init = () => {
     starWarCheck()
 }
 
+loadImage()
 init()
