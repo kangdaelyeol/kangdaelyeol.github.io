@@ -69,7 +69,7 @@ export const SCENE4_MESSAGE_ACTIVE = [
 ]
 
 export const SCENE1_OPACITY_ACTIVE = {
-    from: 0,
+    from: 0.0,
     to: 0.03,
 }
 
