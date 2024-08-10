@@ -106,7 +106,7 @@ export const SCENE1_IMAGE_PATH_LIST = [
 export const SCENE2_IMAGE_PATH_LIST = [
     './image/2/2-1.jpeg',
     './image/2/2-2.JPG',
-    './image/2/2-3a.jpg',
+    './image/2/3.jpg',
     './image/2/2-4.jpeg',
     './image/2/2-5.jpeg',
     './image/2/2-6.jpeg',
