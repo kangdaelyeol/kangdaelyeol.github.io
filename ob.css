@@ -1,13 +1,12 @@
-.box{
+.box {
   background-color: thistle;
   width: 200px;
   height: 200px;
-  margin:50px;
-  transition: all .5s linear;
+  margin: 50px;
+  transition: all 0.5s linear;
 }
 
-
-.active{
+.active {
   background-color: tomato;
 }
 
@@ -16,6 +15,6 @@
   margin-top: 200px;
 }
 
-body{
+body {
   margin-top: 500px;
 }
